@@ -630,10 +630,10 @@
 										content={type === 'mcp' && oauthAuthTypes.includes(auth_type)
 											? edit
 												? $i18n.t(
-														'Identifies this connection in Open WebUI, separately from the OAuth client ID.'
+														'Identifies this connection in Kiru, separately from the OAuth client ID.'
 													)
 												: $i18n.t(
-														'Generated from the name, or enter your own. Identifies this connection in Open WebUI, separately from the OAuth client ID.'
+														'Generated from the name, or enter your own. Identifies this connection in Kiru, separately from the OAuth client ID.'
 													)
 											: ''}
 									>
@@ -897,7 +897,7 @@
 											{$i18n.t('Forward cookies')}
 										</label>
 										<p class="text-xs text-gray-500">
-											{$i18n.t('Forward cookies from your Open WebUI request to this server.')}
+											{$i18n.t('Forward cookies from your Kiru request to this server.')}
 										</p>
 									</div>
 									<Switch
@@ -1075,11 +1075,11 @@
 							<span class="font-normal">
 								{$i18n.t('Warning')}:
 							</span>
-							<!-- LICENSE covers this Open WebUI wordmark.
+							<!-- LICENSE covers this Kiru wordmark.
 							Do not alter, remove, obscure, or replace it except as LICENSE permits:
 							https://docs.openwebui.com/license. -->
 							{$i18n.t(
-								'MCP support is experimental and its specification changes often, which can lead to incompatibilities. OpenAPI specification support is directly maintained by the Open WebUI team, making it the more reliable option for compatibility.'
+								'MCP support is experimental and its specification changes often, which can lead to incompatibilities. OpenAPI specification support is directly maintained by the Kiru team, making it the more reliable option for compatibility.'
 							)}
 
 							<a class="font-normal underline" href="https://docs.openwebui.com/" target="_blank"

@@ -275,10 +275,10 @@
 	};
 
 	const shareModelHandler = async (model) => {
-		// LICENSE covers this Open WebUI Community wordmark.
+		// LICENSE covers this Kiru Community wordmark.
 		// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 		// https://docs.openwebui.com/license.
-		toast.success($i18n.t('Redirecting you to Open WebUI Community'));
+		toast.success($i18n.t('Redirecting you to Kiru Community'));
 
 		const url = 'https://openwebui.com';
 		const fullModel = getFullModel(model);
@@ -511,7 +511,7 @@
 <WorkspaceAccessModal bind:this={accessModal} resourceType="models" onUpdated={getModelList} />
 
 <svelte:head>
-	<!-- LICENSE covers this Open WebUI browser-title identifier.
+	<!-- LICENSE covers this Kiru browser-title identifier.
 	Do not alter, remove, obscure, or replace it except as LICENSE permits:
 	https://docs.openwebui.com/license. -->
 	<title>
@@ -789,7 +789,7 @@
 											loading="lazy"
 											decoding="async"
 											on:error={(e) => {
-												// LICENSE covers this Open WebUI fallback logo.
+												// LICENSE covers this Kiru fallback logo.
 												// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 												// https://docs.openwebui.com/license.
 												e.target.src = '/favicon.png';

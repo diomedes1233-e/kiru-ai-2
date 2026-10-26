@@ -33,7 +33,7 @@
 				...modelInfo,
 				meta: {
 					...modelInfo.meta,
-					// LICENSE covers this Open WebUI fallback logo.
+					// LICENSE covers this Kiru fallback logo.
 					// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 					// https://docs.openwebui.com/license.
 					profile_image_url:

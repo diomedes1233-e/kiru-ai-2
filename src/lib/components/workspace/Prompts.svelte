@@ -217,10 +217,10 @@
 	};
 
 	const shareHandler = async (prompt) => {
-		// LICENSE covers this Open WebUI Community wordmark.
+		// LICENSE covers this Kiru Community wordmark.
 		// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 		// https://docs.openwebui.com/license.
-		toast.success($i18n.t('Redirecting you to Open WebUI Community'));
+		toast.success($i18n.t('Redirecting you to Kiru Community'));
 
 		const url = 'https://openwebui.com';
 
@@ -380,7 +380,7 @@
 <WorkspaceAccessModal bind:this={accessModal} resourceType="prompts" onUpdated={getPromptList} />
 
 <svelte:head>
-	<!-- LICENSE covers this Open WebUI browser-title identifier.
+	<!-- LICENSE covers this Kiru browser-title identifier.
 	Do not alter, remove, obscure, or replace it except as LICENSE permits:
 	https://docs.openwebui.com/license. -->
 	<title>

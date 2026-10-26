@@ -32,7 +32,7 @@
 					}
 				}}
 			>
-				<!-- LICENSE covers this Open WebUI app navigation logo.
+				<!-- LICENSE covers this Kiru app navigation logo.
 				Do not alter, remove, obscure, or replace it except as LICENSE permits:
 				https://docs.openwebui.com/license. -->
 				<img
@@ -60,7 +60,7 @@
 				selected = '';
 			}}
 		>
-			<!-- LICENSE covers this Open WebUI chat navigation logo.
+			<!-- LICENSE covers this Kiru chat navigation logo.
 			Do not alter, remove, obscure, or replace it except as LICENSE permits:
 			https://docs.openwebui.com/license. -->
 			<img

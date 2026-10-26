@@ -1,0 +1,402 @@
+KIRU OS — INFORME DE AUDITORÍA ESTÁTICA
+Fecha: 2026-10-24T12:07:56-05:00
+Proyecto: /Users/usuario/kiru_ai
+Archivos de texto analizados: 1268
+Archivos de código analizados: 1143
+Archivos Python analizados: 291
+
+RESUMEN POR SEVERIDAD:
+  HIGH: 129
+  INFO: 75
+  LOW: 87
+
+HALLAZGOS (revisar manualmente; no se borró nada):
+[LOW] todo_marker — CHANGELOG.md:3055 — - 🔎 Users searching notes can now find hyphenated words and variations with spaces, so searching "todo" now finds "to-do" and "to do". [Commit](https://github.com/open-webui/open-w
+[LOW] todo_marker — docker-compose.a1111-test.yaml:14 — # Hack to get container working on Apple Silicon
+[HIGH] possible_secret — backend/start.sh:73 — possible API key/secret (valor oculto; verificar manualmente)
+[HIGH] possible_secret — backend/start.sh:107 — possible API key/secret (valor oculto; verificar manualmente)
+[LOW] todo_marker — backend/open_webui/models/notes.py:216 — # (strip hyphens so "todo" matches "to-do").
+[LOW] todo_marker — backend/open_webui/routers/auths.py:510 — # TODO: support multiple emails if LDAP returns a list
+[HIGH] possible_secret — backend/open_webui/routers/images.py:462 — possible credential in URL (valor oculto; verificar manualmente)
+[LOW] todo_marker — backend/open_webui/routers/images.py:379 — # TODO - get models from comfyui
+[LOW] todo_marker — backend/open_webui/routers/ollama.py:1208 — # TODO: we should update this part once Ollama supports other types
+[LOW] todo_marker — backend/open_webui/routers/retrieval.py:2184 — # TODO: add playwright to search the web
+[LOW] todo_marker — backend/open_webui/utils/middleware.py:2620 — # TODO: re-enable URL extraction from prompt
+[LOW] todo_marker — backend/open_webui/utils/oauth.py:563 — # TODO: Some OAuth providers require Initial Access Tokens (IATs) for dynamic client registration.
+[LOW] todo_marker — backend/open_webui/utils/oauth.py:982 — # TODO: Replace this logic with a more robust OAuth client registration validation
+[LOW] todo_marker — backend/open_webui/utils/task.py:279 — 'nothing, or the user might be trying to hack something.'
+[LOW] todo_marker — backend/open_webui/utils/tools.py:407 — # TODO: Fix hack for OpenAI API
+[LOW] todo_marker — backend/open_webui/utils/tools.py:430 — # TODO: Support Pydantic models as parameters
+[LOW] todo_marker — backend/open_webui/utils/mcp/client.py:177 — # TODO: handle outputSchema if needed
+[HIGH] possible_secret — src/lib/components/admin/Settings/WebSearch.svelte:1523 — possible credential in URL (valor oculto; verificar manualmente)
+[LOW] todo_marker — src/lib/components/common/RichTextInput.svelte:45 — // This rule eliminates that hack so <pre><code> content is untouched.
+[LOW] todo_marker — src/lib/components/common/RichTextInput.svelte:151 — // TODO: Update to v3 when styling issues are resolved
+[LOW] todo_marker — src/lib/components/notes/NoteEditor.svelte:128 — // pages: [], // TODO: Implement pages for notes to allow users to create multiple pages in a note
+[HIGH] possible_secret — src/lib/i18n/locales/ar/translation.json:1065 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ar/translation.json:1065 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ar-BH/translation.json:1065 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ar-BH/translation.json:1065 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/az-AZ/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/az-AZ/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/bg-BG/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/bg-BG/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/bn-BD/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/bn-BD/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/bo-TB/translation.json:1010 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/bo-TB/translation.json:1010 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/bs-BA/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/bs-BA/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ca-ES/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ca-ES/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ceb-PH/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ceb-PH/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/cs-CZ/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/cs-CZ/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/da-DK/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/da-DK/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/de-DE/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/de-DE/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/dg-DG/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/dg-DG/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/el-GR/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/el-GR/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/en-GB/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/en-US/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/es-ES/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/es-ES/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:179 — "Admins have access to all tools at all times; users need tools assigned per model in the workspace.": "Los administradores tienen acceso a todas las herramientas en todo momento; 
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:187 — "All day": "Todo el día",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:198 — "All time": "Todo el tiempo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:742 — "Delete All": "Eliminar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:743 — "Delete all contents inside this directory": "Eliminar todo el contenido de este directorio",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:744 — "Delete all contents inside this folder": "Eliminar todo el contenido de esta carpeta",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:805 — "Disable all": "Deshabilitar todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:806 — "Disable All": "Deshabilitar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:930 — "Enable All": "Habilitar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:931 — "Enable all ({{COUNT}})": "Habilitar todo ({{COUNT}})",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:1394 — "Hide All": "Ocultar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:1614 — "Mark all as read": "Marcar todo como leído",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:2234 — "Run All": "Ejecutar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:2339 — "Select All": "Seleccionar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:3065 — "settings.admin.models.disableAllModels.label": "Deshabilitar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:3066 — "settings.admin.models.enableAllModels.label": "Habilitar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:3068 — "settings.admin.models.hideAllModels.label": "Ocultar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:3072 — "settings.admin.models.showAllModels.label": "Mostrar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:3236 — "settings.personal.archivedChats.unarchiveAll.label": "Desarchivar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:3536 — "Show All": "Mostrar Todo",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:3537 — "Show all ({{COUNT}} characters)": "Mostrar todo ({{COUNT}} caracteres)",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:3746 — "This will delete <strong>{{NAME}}</strong> and <strong>all its contents</strong>.": "Esto eliminará <strong>{{NAME}}</strong> y <strong>todo su contenido</strong>.",
+[LOW] todo_marker — src/lib/i18n/locales/es-ES/translation.json:3875 — "Unshare All": "Dejar de Compartir Todo",
+[HIGH] possible_secret — src/lib/i18n/locales/et-EE/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/et-EE/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/eu-ES/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/eu-ES/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fa-IR/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fa-IR/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fi-FI/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fi-FI/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fil-PH/translation.json:1022 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fil-PH/translation.json:1022 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fo-FO/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fo-FO/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fr-CA/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fr-CA/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fr-FR/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/fr-FR/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/gl-ES/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/gl-ES/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:169 — "Admins have access to all tools at all times; users need tools assigned per model in the workspace.": "Os administradores teñen acceso a todas as ferramentas en todo momento; os u
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:177 — "All day": "Todo o día",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:188 — "All time": "Todo o tempo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:731 — "Delete All": "Eliminar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:732 — "Delete all contents inside this directory": "Eliminar todo o contido deste directorio",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:733 — "Delete all contents inside this folder": "Eliminar todo o contido deste cartafol",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:794 — "Disable all": "Desactivar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:795 — "Disable All": "Desactivar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:919 — "Enable All": "Activar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:920 — "Enable all ({{COUNT}})": "Activar todo ({{COUNT}})",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:1381 — "Hide All": "Ocultar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:1449 — "Inject the entire content as context for comprehensive processing, this is recommended for complex queries.": "Inxecta todo o contido como contexto para un procesamento completo; 
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:1601 — "Mark all as read": "Marcar todo como lido",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:2217 — "Run All": "Executar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:2322 — "Select All": "Seleccionar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:2636 — "settings.admin.documents.bypassEmbeddingAndRetrieval.description": "Inxecta todo o contido como contexto para un procesamento completo.",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3048 — "settings.admin.models.disableAllModels.label": "Desactivar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3049 — "settings.admin.models.enableAllModels.label": "Activar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3051 — "settings.admin.models.hideAllModels.label": "Ocultar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3055 — "settings.admin.models.showAllModels.label": "Mostrar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3085 — "settings.admin.web.bypassEmbeddingAndRetrieval.description": "Inxecta todo o contido como contexto para un procesamento completo.",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3219 — "settings.personal.archivedChats.unarchiveAll.label": "Desarquivar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3250 — "settings.personal.dataControls.archiveAll.label": "Arquivar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3518 — "Show All": "Mostrar todo",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3519 — "Show all ({{COUNT}} characters)": "Mostrar todo ({{COUNT}} caracteres)",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3726 — "This will delete <strong>{{NAME}}</strong> and <strong>all its contents</strong>.": "Esto eliminará <strong>{{NAME}}</strong> y <strong>todo su contido</strong>.",
+[LOW] todo_marker — src/lib/i18n/locales/gl-ES/translation.json:3855 — "Unshare All": "Deixar de compartir todo",
+[HIGH] possible_secret — src/lib/i18n/locales/he-IL/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/he-IL/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/hi-IN/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/hi-IN/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/hr-HR/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/hr-HR/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/hu-HU/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/hu-HU/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/id-ID/translation.json:1020 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/id-ID/translation.json:1020 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ie-GA/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ie-GA/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/it-IT/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/it-IT/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ja-JP/translation.json:1020 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ja-JP/translation.json:1020 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ka-GE/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ka-GE/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/kab-DZ/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/kab-DZ/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ko-KR/translation.json:1011 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ko-KR/translation.json:1011 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/lt-LT/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/lt-LT/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/lv-LV/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/lv-LV/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ms-MY/translation.json:1020 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ms-MY/translation.json:1020 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/nb-NO/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/nb-NO/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/nl-NL/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/nl-NL/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/pa-IN/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/pa-IN/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/pl-PL/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/pl-PL/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/pt-BR/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/pt-BR/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[LOW] todo_marker — src/lib/i18n/locales/pt-BR/translation.json:179 — "Admins have access to all tools at all times; users need tools assigned per model in the workspace.": "Os administradores têm acesso a todas as ferramentas o tempo todo; os usuári
+[LOW] todo_marker — src/lib/i18n/locales/pt-BR/translation.json:187 — "All day": "O dia todo",
+[LOW] todo_marker — src/lib/i18n/locales/pt-BR/translation.json:198 — "All time": "Todo o período",
+[LOW] todo_marker — src/lib/i18n/locales/pt-BR/translation.json:743 — "Delete all contents inside this directory": "Excluir todo o conteúdo deste diretório",
+[LOW] todo_marker — src/lib/i18n/locales/pt-BR/translation.json:744 — "Delete all contents inside this folder": "Excluir todo o conteúdo desta pasta",
+[LOW] todo_marker — src/lib/i18n/locales/pt-BR/translation.json:1462 — "Inject the entire content as context for comprehensive processing, this is recommended for complex queries.": "Injete todo o conteúdo como contexto para processamento abrangente; 
+[LOW] todo_marker — src/lib/i18n/locales/pt-BR/translation.json:1562 — "Lifetime tokens": "Tokens de todo o período",
+[LOW] todo_marker — src/lib/i18n/locales/pt-BR/translation.json:2653 — "settings.admin.documents.bypassEmbeddingAndRetrieval.description": "Injete todo o conteúdo como contexto para um processamento abrangente.",
+[LOW] todo_marker — src/lib/i18n/locales/pt-BR/translation.json:3102 — "settings.admin.web.bypassEmbeddingAndRetrieval.description": "Injete todo o conteúdo como contexto para um processamento abrangente.",
+[HIGH] possible_secret — src/lib/i18n/locales/pt-PT/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/pt-PT/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[LOW] todo_marker — src/lib/i18n/locales/pt-PT/translation.json:187 — "All day": "Todo o dia",
+[LOW] todo_marker — src/lib/i18n/locales/pt-PT/translation.json:198 — "All time": "Todo o tempo",
+[LOW] todo_marker — src/lib/i18n/locales/pt-PT/translation.json:743 — "Delete all contents inside this directory": "Apagar todo o conteúdo dentro deste diretório",
+[LOW] todo_marker — src/lib/i18n/locales/pt-PT/translation.json:744 — "Delete all contents inside this folder": "Apagar todo o conteúdo dentro desta pasta",
+[LOW] todo_marker — src/lib/i18n/locales/pt-PT/translation.json:1462 — "Inject the entire content as context for comprehensive processing, this is recommended for complex queries.": "Injetar todo o conteúdo como contexto para um processamento abrangen
+[LOW] todo_marker — src/lib/i18n/locales/pt-PT/translation.json:2394 — "Set system-wide interface defaults for every account. Personal settings override these defaults.": "Definir as predefinições de interface de todo o sistema para todas as contas. A
+[LOW] todo_marker — src/lib/i18n/locales/pt-PT/translation.json:2653 — "settings.admin.documents.bypassEmbeddingAndRetrieval.description": "Injetar todo o conteúdo como contexto para um processamento abrangente.",
+[LOW] todo_marker — src/lib/i18n/locales/pt-PT/translation.json:3102 — "settings.admin.web.bypassEmbeddingAndRetrieval.description": "Injetar todo o conteúdo como contexto para um processamento abrangente.",
+[LOW] todo_marker — src/lib/i18n/locales/pt-PT/translation.json:3746 — "This will delete <strong>{{NAME}}</strong> and <strong>all its contents</strong>.": "Isto irá eliminar <strong>{{NAME}}</strong> e <strong>todo o seu conteúdo</strong>.",
+[HIGH] possible_secret — src/lib/i18n/locales/ro-RO/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ro-RO/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ru-RU/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ru-RU/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/sk-SK/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/sk-SK/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/sl-SI/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/sl-SI/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/sr-RS/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/sr-RS/translation.json:1032 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/sv-SE/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/sv-SE/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ta-IN/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ta-IN/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/th-TH/translation.json:1010 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/th-TH/translation.json:1010 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/tk-TM/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/tk-TM/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/tr-TR/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/tr-TR/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ug-CN/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ug-CN/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/uk-UA/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/uk-UA/translation.json:1043 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ur-PK/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/ur-PK/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/uz-Cyrl-UZ/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/uz-Latn-UZ/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/uz-Latn-UZ/translation.json:1021 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/vi-VN/translation.json:1010 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/vi-VN/translation.json:1010 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/zh-CN/translation.json:1018 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/zh-CN/translation.json:1018 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/zh-TW/translation.json:1010 — possible credential in URL (valor oculto; verificar manualmente)
+[HIGH] possible_secret — src/lib/i18n/locales/zh-TW/translation.json:1010 — possible credential in URL (valor oculto; verificar manualmente)
+[LOW] todo_marker — src/lib/workers/kokoro.worker.ts:4 — // TODO: Below doesn't work as expected, need to investigate further
+[LOW] todo_marker — static/pyodide/pyodide.d.ts:133 — * TODO: Make this private and expose a setter
+[INFO] possibly_unreferenced_source — contribution_stats.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — hatch_build.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — postcss.config.js — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — tailwind.config.js — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/models/chat_messages.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/models/oauth_sessions.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/models/shared_chats.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/retrieval/loaders/external_document.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/retrieval/loaders/external_web.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/retrieval/models/base_reranker.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/retrieval/models/colbert.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/retrieval/vector/async_client.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/retrieval/vector/dbs/mariadb_vector.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/retrieval/vector/dbs/milvus_multitenancy.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/retrieval/vector/dbs/qdrant_multitenancy.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/retrieval/web/jina_search.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/socket/redis_room_channels.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/tools/knowledge_fs.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/utils/asgi_middleware.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/utils/chat_fork.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/utils/misc.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/utils/rate_limit.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/utils/security_headers.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/utils/skill_files.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — backend/open_webui/utils/tool_search.py — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/app.d.ts — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/admin/Functions/AddFunctionMenu.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/automations/FolderDropdown.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/automations/TerminalDropdown.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/chat/TagChatModal.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/chat/Messages/Citations/CitationsModal.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/common/Marquee.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/common/SlideShow.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/AdjustmentsHorizontalOutline.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/Agile.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/ArrowTurnDownRight.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/Bars3BottomLeft.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/BookOpen.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/Bookmark.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/BookmarkSlash.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/CalendarSolid.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/ChartBar.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/Cog6Solid.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/CommandLineSolid.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/DocumentChartBar.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/DocumentCheck.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/FaceId.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/FilePlusAlt.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/FloppyDisk.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/Github.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/Glasses.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/Headphone.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/KeyframePlus.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/Lifebuoy.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/MenuLines.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/PagePlus.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/PenAlt.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/PeopleTag.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/PhotoSolid.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/QuestionMarkCircle.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/SignOut.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/SparklesSolid.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/UserBadgeCheck.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/UserCircleSolid.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/UsersSolid.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/icons/ZoomReset.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/notes/AIMenu.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/workspace/Knowledge/KnowledgeBase/DirectoryRow.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/workspace/Knowledge/KnowledgeBase/KnowledgeBreadcrumbs.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/workspace/Knowledge/KnowledgeBase/NewDirectoryModal.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/workspace/Tools/AddToolMenu.svelte — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/components/workspace/common/versionDiff.test.ts — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — src/lib/encryption/vendor/encryption_bg.wasm.d.ts — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — static/pyodide/ffi.d.ts — No se encontró referencia textual simple; puede usarse dinámicamente.
+[INFO] possibly_unreferenced_source — static/pyodide/pyodide.d.ts — No se encontró referencia textual simple; puede usarse dinámicamente.
+
+COMPROBACIONES GIT:
+$ git status --short (código: 0)
+ M Dockerfile
+ M package-lock.json
+ M package.json
+ M src/app.html
+ M src/lib/apis/configs/index.ts
+ M src/lib/components/AddConnectionModal.svelte
+ M src/lib/components/AddTerminalServerModal.svelte
+ M src/lib/components/AddToolServerModal.svelte
+ M src/lib/components/ChangelogModal.svelte
+ M src/lib/components/NotificationToast.svelte
+ M src/lib/components/OnBoarding.svelte
+ M src/lib/components/admin/Analytics/Dashboard.svelte
+ M src/lib/components/admin/Evaluations/Feedbacks.svelte
+ M src/lib/components/admin/Evaluations/Leaderboard.svelte
+ M src/lib/components/admin/Functions.svelte
+ M src/lib/components/admin/Settings/Apps.svelte
+ M src/lib/components/admin/Settings/Audio.svelte
+ M src/lib/components/admin/Settings/Authentication.svelte
+ M src/lib/components/admin/Settings/CodeExecution.svelte
+ M src/lib/components/admin/Settings/Evaluations/ArenaModelModal.svelte
+ M src/lib/components/admin/Settings/Events.svelte
+ M src/lib/components/admin/Settings/ExternalKnowledge.svelte
+ M src/lib/components/admin/Settings/General.svelte
+ M src/lib/components/admin/Settings/Models.svelte
+ M src/lib/components/admin/Users/UserList.svelte
+ M src/lib/components/app/AppSidebar.svelte
+ M src/lib/components/automations/AutomationEditor.svelte
+ M src/lib/components/automations/ModelDropdown.svelte
+ M src/lib/components/channel/Channel.svelte
+ M src/lib/components/channel/MessageInput/MentionList.svelte
+ M src/lib/components/channel/Messages/Message.svelte
+ M src/lib/components/channel/WebhookItem.svelte
+ M src/lib/components/chat/Chat.svelte
+ M src/lib/components/chat/ChatPlaceholder.svelte
+ M src/lib/components/chat/MessageInput/Commands/AtCommands.svelte
+ M src/lib/components/chat/MessageInput/Commands/Models.svelte
+ M src/lib/components/chat/Messages/Citations.svelte
+ M src/lib/components/chat/Messages/ProfileImage.svelte
+ M src/lib/components/chat/Messages/UserMessage.svelte
+ M src/lib/components/chat/ModelSelector/ModelItem.svelte
+ M src/lib/components/chat/Placeholder.svelte
+ M src/lib/components/chat/Settings/About.svelte
+ M src/lib/components/chat/Settings/Connections.svelte
+ M src/lib/components/chat/Settings/General.svelte
+ M src/lib/components/chat/Settings/Integrations.svelte
+ M src/lib/components/chat/Settings/SyncStatsModal.svelte
+ M src/lib/components/chat/ShareChatModal.svelte
+ M src/lib/components/chat/Suggestions.svelte
+ M src/lib/components/chat/ToolServersModal.svelte
+ M src/lib/components/layout/Sidebar.svelte
+ M src/lib/components/layout/Sidebar/PinnedModelItem.svelte
+ M src/lib/components/notes/NoteEditor.svelte
+ M src/lib/components/notes/Notes.svelte
+ M src/lib/components/workspace/Knowledge.svelte
+ M src/lib/components/workspace/Knowledge/KnowledgeBase.svelte
+ M src/lib/components/workspace/Models.svelte
+ M src/lib/components/workspace/Models/ModelEditor.svelte
+ M src/lib/components/workspace/Prompts.svelte
+ M src/lib/components/workspace/Skills.svelte
+ M src/lib/components/workspace/Tools.svelte
+ M src/lib/components/workspace/common/CommunityDiscover.svelte
+ M src/lib/components/workspace/common/ManifestModal.svelte
+ M src/lib/constants.ts
+ M src/lib/utils/safeImageUrl.ts
+ M src/routes/(app)/admin/+layout.svelte
+ M src/routes/(app)/admin/functions/create/+page.svelte
+ M src/routes/(app)/admin/functions/edit/+page.svelte
+ M src/routes/(app)/automations/+page.svelte
+ M src/routes/(app)/calendar/+page.svelte
+ M src/routes/(app)/channels/[id]/encrypted/+page.svelte
+ M src/routes/(app)/home/+layout.svelte
+ M src/routes/(app)/notes/+layout.svelte
+ M src/routes/(app)/playground/+layout.svelte
+ M src/routes/(app)/workspace/+layout.svelte
+ M src/routes/(app)/workspace/models/create/+page.svelte
+ M src/routes/(app)/workspace/tools/create/+page.svelte
+ M src/routes/(app)/workspace/tools/edit/+page.svelte
+ M src/routes/+layout.svelte
+ M src/routes/auth/+page.svelte
+ M src/routes/s/[id]/+page.svelte
+ M src/routes/watch/+page.svelte
+ M static/favicon.png
+ M static/pyodide/pyodide-lock.json
+ M static/static/custom.css
+ M vite.config.ts
+?? Dockerfile.backup
+?? build_and_clean.sh
+?? static/logo-kiru.png
+?? static/logo.png
+?? vite.config.ts.backup
+$ git diff --check (código: 2)
+Dockerfile:26: new blank line at EOF.
+
+NOTA: un archivo sin referencias textuales no necesariamente está obsoleto.
+No eliminar código basándose únicamente en este informe.

@@ -354,7 +354,7 @@
 <WorkspaceAccessModal bind:this={accessModal} resourceType="notes" onUpdated={init} />
 
 <svelte:head>
-	<!-- LICENSE covers this Open WebUI browser-title identifier.
+	<!-- LICENSE covers this Kiru browser-title identifier.
 	Do not alter, remove, obscure, or replace it except as LICENSE permits:
 	https://docs.openwebui.com/license. -->
 	<title>

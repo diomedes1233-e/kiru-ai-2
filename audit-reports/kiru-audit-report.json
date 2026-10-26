@@ -1,0 +1,2090 @@
+{
+  "tool": "kiru_auditor.py",
+  "timestamp": "2026-10-24T12:07:56-05:00",
+  "project_root": "/Users/usuario/kiru_ai",
+  "mode": "deep",
+  "safety": "read-only; no project files modified or deleted",
+  "static_analysis": {
+    "files_scanned": 1268,
+    "source_files_scanned": 1143,
+    "python_files_scanned": 291,
+    "findings": [
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "CHANGELOG.md",
+        "line": 3055,
+        "detail": "- 🔎 Users searching notes can now find hyphenated words and variations with spaces, so searching \"todo\" now finds \"to-do\" and \"to do\". [Commit](https://github.com/open-webui/open-w"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "docker-compose.a1111-test.yaml",
+        "line": 14,
+        "detail": "# Hack to get container working on Apple Silicon"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "backend/start.sh",
+        "line": 73,
+        "detail": "possible API key/secret (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "backend/start.sh",
+        "line": 107,
+        "detail": "possible API key/secret (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/models/notes.py",
+        "line": 216,
+        "detail": "# (strip hyphens so \"todo\" matches \"to-do\")."
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/routers/auths.py",
+        "line": 510,
+        "detail": "# TODO: support multiple emails if LDAP returns a list"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "backend/open_webui/routers/images.py",
+        "line": 462,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/routers/images.py",
+        "line": 379,
+        "detail": "# TODO - get models from comfyui"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/routers/ollama.py",
+        "line": 1208,
+        "detail": "# TODO: we should update this part once Ollama supports other types"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/routers/retrieval.py",
+        "line": 2184,
+        "detail": "# TODO: add playwright to search the web"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/utils/middleware.py",
+        "line": 2620,
+        "detail": "# TODO: re-enable URL extraction from prompt"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/utils/oauth.py",
+        "line": 563,
+        "detail": "# TODO: Some OAuth providers require Initial Access Tokens (IATs) for dynamic client registration."
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/utils/oauth.py",
+        "line": 982,
+        "detail": "# TODO: Replace this logic with a more robust OAuth client registration validation"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/utils/task.py",
+        "line": 279,
+        "detail": "'nothing, or the user might be trying to hack something.'"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/utils/tools.py",
+        "line": 407,
+        "detail": "# TODO: Fix hack for OpenAI API"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/utils/tools.py",
+        "line": 430,
+        "detail": "# TODO: Support Pydantic models as parameters"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "backend/open_webui/utils/mcp/client.py",
+        "line": 177,
+        "detail": "# TODO: handle outputSchema if needed"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/components/admin/Settings/WebSearch.svelte",
+        "line": 1523,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/components/common/RichTextInput.svelte",
+        "line": 45,
+        "detail": "// This rule eliminates that hack so <pre><code> content is untouched."
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/components/common/RichTextInput.svelte",
+        "line": 151,
+        "detail": "// TODO: Update to v3 when styling issues are resolved"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/components/notes/NoteEditor.svelte",
+        "line": 128,
+        "detail": "// pages: [], // TODO: Implement pages for notes to allow users to create multiple pages in a note"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ar/translation.json",
+        "line": 1065,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ar/translation.json",
+        "line": 1065,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ar-BH/translation.json",
+        "line": 1065,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ar-BH/translation.json",
+        "line": 1065,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/az-AZ/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/az-AZ/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/bg-BG/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/bg-BG/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/bn-BD/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/bn-BD/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/bo-TB/translation.json",
+        "line": 1010,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/bo-TB/translation.json",
+        "line": 1010,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/bs-BA/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/bs-BA/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ca-ES/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ca-ES/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ceb-PH/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ceb-PH/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/cs-CZ/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/cs-CZ/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/da-DK/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/da-DK/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/de-DE/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/de-DE/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/dg-DG/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/dg-DG/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/el-GR/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/el-GR/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/en-GB/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/en-US/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 179,
+        "detail": "\"Admins have access to all tools at all times; users need tools assigned per model in the workspace.\": \"Los administradores tienen acceso a todas las herramientas en todo momento; "
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 187,
+        "detail": "\"All day\": \"Todo el día\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 198,
+        "detail": "\"All time\": \"Todo el tiempo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 742,
+        "detail": "\"Delete All\": \"Eliminar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 743,
+        "detail": "\"Delete all contents inside this directory\": \"Eliminar todo el contenido de este directorio\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 744,
+        "detail": "\"Delete all contents inside this folder\": \"Eliminar todo el contenido de esta carpeta\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 805,
+        "detail": "\"Disable all\": \"Deshabilitar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 806,
+        "detail": "\"Disable All\": \"Deshabilitar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 930,
+        "detail": "\"Enable All\": \"Habilitar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 931,
+        "detail": "\"Enable all ({{COUNT}})\": \"Habilitar todo ({{COUNT}})\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 1394,
+        "detail": "\"Hide All\": \"Ocultar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 1614,
+        "detail": "\"Mark all as read\": \"Marcar todo como leído\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 2234,
+        "detail": "\"Run All\": \"Ejecutar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 2339,
+        "detail": "\"Select All\": \"Seleccionar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 3065,
+        "detail": "\"settings.admin.models.disableAllModels.label\": \"Deshabilitar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 3066,
+        "detail": "\"settings.admin.models.enableAllModels.label\": \"Habilitar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 3068,
+        "detail": "\"settings.admin.models.hideAllModels.label\": \"Ocultar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 3072,
+        "detail": "\"settings.admin.models.showAllModels.label\": \"Mostrar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 3236,
+        "detail": "\"settings.personal.archivedChats.unarchiveAll.label\": \"Desarchivar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 3536,
+        "detail": "\"Show All\": \"Mostrar Todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 3537,
+        "detail": "\"Show all ({{COUNT}} characters)\": \"Mostrar todo ({{COUNT}} caracteres)\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 3746,
+        "detail": "\"This will delete <strong>{{NAME}}</strong> and <strong>all its contents</strong>.\": \"Esto eliminará <strong>{{NAME}}</strong> y <strong>todo su contenido</strong>.\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/es-ES/translation.json",
+        "line": 3875,
+        "detail": "\"Unshare All\": \"Dejar de Compartir Todo\","
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/et-EE/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/et-EE/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/eu-ES/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/eu-ES/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fa-IR/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fa-IR/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fi-FI/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fi-FI/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fil-PH/translation.json",
+        "line": 1022,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fil-PH/translation.json",
+        "line": 1022,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fo-FO/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fo-FO/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fr-CA/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fr-CA/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fr-FR/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/fr-FR/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 169,
+        "detail": "\"Admins have access to all tools at all times; users need tools assigned per model in the workspace.\": \"Os administradores teñen acceso a todas as ferramentas en todo momento; os u"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 177,
+        "detail": "\"All day\": \"Todo o día\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 188,
+        "detail": "\"All time\": \"Todo o tempo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 731,
+        "detail": "\"Delete All\": \"Eliminar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 732,
+        "detail": "\"Delete all contents inside this directory\": \"Eliminar todo o contido deste directorio\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 733,
+        "detail": "\"Delete all contents inside this folder\": \"Eliminar todo o contido deste cartafol\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 794,
+        "detail": "\"Disable all\": \"Desactivar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 795,
+        "detail": "\"Disable All\": \"Desactivar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 919,
+        "detail": "\"Enable All\": \"Activar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 920,
+        "detail": "\"Enable all ({{COUNT}})\": \"Activar todo ({{COUNT}})\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 1381,
+        "detail": "\"Hide All\": \"Ocultar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 1449,
+        "detail": "\"Inject the entire content as context for comprehensive processing, this is recommended for complex queries.\": \"Inxecta todo o contido como contexto para un procesamento completo; "
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 1601,
+        "detail": "\"Mark all as read\": \"Marcar todo como lido\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 2217,
+        "detail": "\"Run All\": \"Executar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 2322,
+        "detail": "\"Select All\": \"Seleccionar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 2636,
+        "detail": "\"settings.admin.documents.bypassEmbeddingAndRetrieval.description\": \"Inxecta todo o contido como contexto para un procesamento completo.\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3048,
+        "detail": "\"settings.admin.models.disableAllModels.label\": \"Desactivar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3049,
+        "detail": "\"settings.admin.models.enableAllModels.label\": \"Activar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3051,
+        "detail": "\"settings.admin.models.hideAllModels.label\": \"Ocultar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3055,
+        "detail": "\"settings.admin.models.showAllModels.label\": \"Mostrar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3085,
+        "detail": "\"settings.admin.web.bypassEmbeddingAndRetrieval.description\": \"Inxecta todo o contido como contexto para un procesamento completo.\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3219,
+        "detail": "\"settings.personal.archivedChats.unarchiveAll.label\": \"Desarquivar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3250,
+        "detail": "\"settings.personal.dataControls.archiveAll.label\": \"Arquivar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3518,
+        "detail": "\"Show All\": \"Mostrar todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3519,
+        "detail": "\"Show all ({{COUNT}} characters)\": \"Mostrar todo ({{COUNT}} caracteres)\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3726,
+        "detail": "\"This will delete <strong>{{NAME}}</strong> and <strong>all its contents</strong>.\": \"Esto eliminará <strong>{{NAME}}</strong> y <strong>todo su contido</strong>.\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/gl-ES/translation.json",
+        "line": 3855,
+        "detail": "\"Unshare All\": \"Deixar de compartir todo\","
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/he-IL/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/he-IL/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/hi-IN/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/hi-IN/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/hr-HR/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/hr-HR/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/hu-HU/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/hu-HU/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/id-ID/translation.json",
+        "line": 1020,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/id-ID/translation.json",
+        "line": 1020,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ie-GA/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ie-GA/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/it-IT/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/it-IT/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ja-JP/translation.json",
+        "line": 1020,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ja-JP/translation.json",
+        "line": 1020,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ka-GE/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ka-GE/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/kab-DZ/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/kab-DZ/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ko-KR/translation.json",
+        "line": 1011,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ko-KR/translation.json",
+        "line": 1011,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/lt-LT/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/lt-LT/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/lv-LV/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/lv-LV/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ms-MY/translation.json",
+        "line": 1020,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ms-MY/translation.json",
+        "line": 1020,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/nb-NO/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/nb-NO/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/nl-NL/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/nl-NL/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/pa-IN/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/pa-IN/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/pl-PL/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/pl-PL/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 179,
+        "detail": "\"Admins have access to all tools at all times; users need tools assigned per model in the workspace.\": \"Os administradores têm acesso a todas as ferramentas o tempo todo; os usuári"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 187,
+        "detail": "\"All day\": \"O dia todo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 198,
+        "detail": "\"All time\": \"Todo o período\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 743,
+        "detail": "\"Delete all contents inside this directory\": \"Excluir todo o conteúdo deste diretório\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 744,
+        "detail": "\"Delete all contents inside this folder\": \"Excluir todo o conteúdo desta pasta\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 1462,
+        "detail": "\"Inject the entire content as context for comprehensive processing, this is recommended for complex queries.\": \"Injete todo o conteúdo como contexto para processamento abrangente; "
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 1562,
+        "detail": "\"Lifetime tokens\": \"Tokens de todo o período\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 2653,
+        "detail": "\"settings.admin.documents.bypassEmbeddingAndRetrieval.description\": \"Injete todo o conteúdo como contexto para um processamento abrangente.\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-BR/translation.json",
+        "line": 3102,
+        "detail": "\"settings.admin.web.bypassEmbeddingAndRetrieval.description\": \"Injete todo o conteúdo como contexto para um processamento abrangente.\","
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 187,
+        "detail": "\"All day\": \"Todo o dia\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 198,
+        "detail": "\"All time\": \"Todo o tempo\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 743,
+        "detail": "\"Delete all contents inside this directory\": \"Apagar todo o conteúdo dentro deste diretório\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 744,
+        "detail": "\"Delete all contents inside this folder\": \"Apagar todo o conteúdo dentro desta pasta\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 1462,
+        "detail": "\"Inject the entire content as context for comprehensive processing, this is recommended for complex queries.\": \"Injetar todo o conteúdo como contexto para um processamento abrangen"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 2394,
+        "detail": "\"Set system-wide interface defaults for every account. Personal settings override these defaults.\": \"Definir as predefinições de interface de todo o sistema para todas as contas. A"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 2653,
+        "detail": "\"settings.admin.documents.bypassEmbeddingAndRetrieval.description\": \"Injetar todo o conteúdo como contexto para um processamento abrangente.\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 3102,
+        "detail": "\"settings.admin.web.bypassEmbeddingAndRetrieval.description\": \"Injetar todo o conteúdo como contexto para um processamento abrangente.\","
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/i18n/locales/pt-PT/translation.json",
+        "line": 3746,
+        "detail": "\"This will delete <strong>{{NAME}}</strong> and <strong>all its contents</strong>.\": \"Isto irá eliminar <strong>{{NAME}}</strong> e <strong>todo o seu conteúdo</strong>.\","
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ro-RO/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ro-RO/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ru-RU/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ru-RU/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/sk-SK/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/sk-SK/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/sl-SI/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/sl-SI/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/sr-RS/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/sr-RS/translation.json",
+        "line": 1032,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/sv-SE/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/sv-SE/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ta-IN/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ta-IN/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/th-TH/translation.json",
+        "line": 1010,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/th-TH/translation.json",
+        "line": 1010,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/tk-TM/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/tk-TM/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/tr-TR/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/tr-TR/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ug-CN/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ug-CN/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/uk-UA/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/uk-UA/translation.json",
+        "line": 1043,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ur-PK/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/ur-PK/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/uz-Cyrl-UZ/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/uz-Latn-UZ/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/uz-Latn-UZ/translation.json",
+        "line": 1021,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/vi-VN/translation.json",
+        "line": 1010,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/vi-VN/translation.json",
+        "line": 1010,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/zh-CN/translation.json",
+        "line": 1018,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/zh-CN/translation.json",
+        "line": 1018,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/zh-TW/translation.json",
+        "line": 1010,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "HIGH",
+        "type": "possible_secret",
+        "file": "src/lib/i18n/locales/zh-TW/translation.json",
+        "line": 1010,
+        "detail": "possible credential in URL (valor oculto; verificar manualmente)"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "src/lib/workers/kokoro.worker.ts",
+        "line": 4,
+        "detail": "// TODO: Below doesn't work as expected, need to investigate further"
+      },
+      {
+        "severity": "LOW",
+        "type": "todo_marker",
+        "file": "static/pyodide/pyodide.d.ts",
+        "line": 133,
+        "detail": "* TODO: Make this private and expose a setter"
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "contribution_stats.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "hatch_build.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "postcss.config.js",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "tailwind.config.js",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/models/chat_messages.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/models/oauth_sessions.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/models/shared_chats.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/retrieval/loaders/external_document.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/retrieval/loaders/external_web.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/retrieval/models/base_reranker.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/retrieval/models/colbert.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/retrieval/vector/async_client.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/retrieval/vector/dbs/mariadb_vector.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/retrieval/vector/dbs/milvus_multitenancy.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/retrieval/vector/dbs/qdrant_multitenancy.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/retrieval/web/jina_search.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/socket/redis_room_channels.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/tools/knowledge_fs.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/utils/asgi_middleware.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/utils/chat_fork.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/utils/misc.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/utils/rate_limit.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/utils/security_headers.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/utils/skill_files.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "backend/open_webui/utils/tool_search.py",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/app.d.ts",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/admin/Functions/AddFunctionMenu.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/automations/FolderDropdown.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/automations/TerminalDropdown.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/chat/TagChatModal.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/chat/Messages/Citations/CitationsModal.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/common/Marquee.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/common/SlideShow.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/AdjustmentsHorizontalOutline.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/Agile.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/ArrowTurnDownRight.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/Bars3BottomLeft.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/BookOpen.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/Bookmark.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/BookmarkSlash.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/CalendarSolid.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/ChartBar.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/Cog6Solid.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/CommandLineSolid.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/DocumentChartBar.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/DocumentCheck.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/FaceId.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/FilePlusAlt.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/FloppyDisk.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/Github.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/Glasses.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/Headphone.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/KeyframePlus.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/Lifebuoy.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/MenuLines.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/PagePlus.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/PenAlt.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/PeopleTag.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/PhotoSolid.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/QuestionMarkCircle.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/SignOut.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/SparklesSolid.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/UserBadgeCheck.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/UserCircleSolid.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/UsersSolid.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/icons/ZoomReset.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/notes/AIMenu.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/workspace/Knowledge/KnowledgeBase/DirectoryRow.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/workspace/Knowledge/KnowledgeBase/KnowledgeBreadcrumbs.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/workspace/Knowledge/KnowledgeBase/NewDirectoryModal.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/workspace/Tools/AddToolMenu.svelte",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/components/workspace/common/versionDiff.test.ts",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "src/lib/encryption/vendor/encryption_bg.wasm.d.ts",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "static/pyodide/ffi.d.ts",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      },
+      {
+        "severity": "INFO",
+        "type": "possibly_unreferenced_source",
+        "file": "static/pyodide/pyodide.d.ts",
+        "line": null,
+        "detail": "No se encontró referencia textual simple; puede usarse dinámicamente."
+      }
+    ],
+    "severity_counts": {
+      "LOW": 87,
+      "HIGH": 129,
+      "INFO": 75
+    },
+    "config_files": [
+      {
+        "file": "package.json",
+        "status": "present",
+        "purpose": "configuración y scripts del frontend"
+      },
+      {
+        "file": "pyproject.toml",
+        "status": "present",
+        "purpose": "configuración Python (si aplica)"
+      },
+      {
+        "file": "Dockerfile",
+        "status": "present",
+        "purpose": "construcción de imagen (si aplica)"
+      },
+      {
+        "file": ".env.example",
+        "status": "present",
+        "purpose": "plantilla de variables de entorno (si aplica)"
+      }
+    ]
+  },
+  "commands": [
+    {
+      "command": "git status --short",
+      "returncode": 0,
+      "output": " M Dockerfile\n M package-lock.json\n M package.json\n M src/app.html\n M src/lib/apis/configs/index.ts\n M src/lib/components/AddConnectionModal.svelte\n M src/lib/components/AddTerminalServerModal.svelte\n M src/lib/components/AddToolServerModal.svelte\n M src/lib/components/ChangelogModal.svelte\n M src/lib/components/NotificationToast.svelte\n M src/lib/components/OnBoarding.svelte\n M src/lib/components/admin/Analytics/Dashboard.svelte\n M src/lib/components/admin/Evaluations/Feedbacks.svelte\n M src/lib/components/admin/Evaluations/Leaderboard.svelte\n M src/lib/components/admin/Functions.svelte\n M src/lib/components/admin/Settings/Apps.svelte\n M src/lib/components/admin/Settings/Audio.svelte\n M src/lib/components/admin/Settings/Authentication.svelte\n M src/lib/components/admin/Settings/CodeExecution.svelte\n M src/lib/components/admin/Settings/Evaluations/ArenaModelModal.svelte\n M src/lib/components/admin/Settings/Events.svelte\n M src/lib/components/admin/Settings/ExternalKnowledge.svelte\n M src/lib/components/admin/Settings/General.svelte\n M src/lib/components/admin/Settings/Models.svelte\n M src/lib/components/admin/Users/UserList.svelte\n M src/lib/components/app/AppSidebar.svelte\n M src/lib/components/automations/AutomationEditor.svelte\n M src/lib/components/automations/ModelDropdown.svelte\n M src/lib/components/channel/Channel.svelte\n M src/lib/components/channel/MessageInput/MentionList.svelte\n M src/lib/components/channel/Messages/Message.svelte\n M src/lib/components/channel/WebhookItem.svelte\n M src/lib/components/chat/Chat.svelte\n M src/lib/components/chat/ChatPlaceholder.svelte\n M src/lib/components/chat/MessageInput/Commands/AtCommands.svelte\n M src/lib/components/chat/MessageInput/Commands/Models.svelte\n M src/lib/components/chat/Messages/Citations.svelte\n M src/lib/components/chat/Messages/ProfileImage.svelte\n M src/lib/components/chat/Messages/UserMessage.svelte\n M src/lib/components/chat/ModelSelector/ModelItem.svelte\n M src/lib/components/chat/Placeholder.svelte\n M src/lib/components/chat/Settings/About.svelte\n M src/lib/components/chat/Settings/Connections.svelte\n M src/lib/components/chat/Settings/General.svelte\n M src/lib/components/chat/Settings/Integrations.svelte\n M src/lib/components/chat/Settings/SyncStatsModal.svelte\n M src/lib/components/chat/ShareChatModal.svelte\n M src/lib/components/chat/Suggestions.svelte\n M src/lib/components/chat/ToolServersModal.svelte\n M src/lib/components/layout/Sidebar.svelte\n M src/lib/components/layout/Sidebar/PinnedModelItem.svelte\n M src/lib/components/notes/NoteEditor.svelte\n M src/lib/components/notes/Notes.svelte\n M src/lib/components/workspace/Knowledge.svelte\n M src/lib/components/workspace/Knowledge/KnowledgeBase.svelte\n M src/lib/components/workspace/Models.svelte\n M src/lib/components/workspace/Models/ModelEditor.svelte\n M src/lib/components/workspace/Prompts.svelte\n M src/lib/components/workspace/Skills.svelte\n M src/lib/components/workspace/Tools.svelte\n M src/lib/components/workspace/common/CommunityDiscover.svelte\n M src/lib/components/workspace/common/ManifestModal.svelte\n M src/lib/constants.ts\n M src/lib/utils/safeImageUrl.ts\n M src/routes/(app)/admin/+layout.svelte\n M src/routes/(app)/admin/functions/create/+page.svelte\n M src/routes/(app)/admin/functions/edit/+page.svelte\n M src/routes/(app)/automations/+page.svelte\n M src/routes/(app)/calendar/+page.svelte\n M src/routes/(app)/channels/[id]/encrypted/+page.svelte\n M src/routes/(app)/home/+layout.svelte\n M src/routes/(app)/notes/+layout.svelte\n M src/routes/(app)/playground/+layout.svelte\n M src/routes/(app)/workspace/+layout.svelte\n M src/routes/(app)/workspace/models/create/+page.svelte\n M src/routes/(app)/workspace/tools/create/+page.svelte\n M src/routes/(app)/workspace/tools/edit/+page.svelte\n M src/routes/+layout.svelte\n M src/routes/auth/+page.svelte\n M src/routes/s/[id]/+page.svelte\n M src/routes/watch/+page.svelte\n M static/favicon.png\n M static/pyodide/pyodide-lock.json\n M static/static/custom.css\n M vite.config.ts\n?? Dockerfile.backup\n?? build_and_clean.sh\n?? static/logo-kiru.png\n?? static/logo.png\n?? vite.config.ts.backup\n"
+    },
+    {
+      "command": "git diff --check",
+      "returncode": 2,
+      "output": "Dockerfile:26: new blank line at EOF.\n"
+    }
+  ]
+}

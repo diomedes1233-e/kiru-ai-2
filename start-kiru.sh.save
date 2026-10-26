@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Detener la ejecución si ocurre algún error
+set -e
+
+echo "🚀 Iniciando automatización para Kiru AI..."
+
+# 1. Asegurar que estamos en el directorio correcto del proyecto
+cd "$(dirname "$0")"
+
+# 2. Verificar si Docker está corriendo en tu Mac
+if ! docker info > /dev/null 2>&1; then
+    echo "❌ Error: Docker Desktop no está abierto. Por favor enciéndelo y vuelve a intentar."
+    exit 1
+fi
+
+echo "🧹 Limpiando contenedores anteriores de Docker..."
+docker compose down --remove-orphans
+
+echo "🔨 Construyendo y levantando los servicios con Docker Compose..."
+# Usa tu docker-compose principal (o cambia el archivo si usas uno específico como docker-compose.yaml)
+docker compose up --build -d
+
+echo "✅ ¡Todo listo! Los servicios están corriendo en segundo plano."
+echo "--------------------------------------------------------"
+echo "🌐 Interfaz Svelte / Frontend disponible en el puerto configurado"
+echo "🔌 Tu API local también se encuentra activa"
+echo "--------------------------------------------------------"
+echo "💡 Para ver los logs en tiempo real, ejecuta: docker compose logs -f"
+
+

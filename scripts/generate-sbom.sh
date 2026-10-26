@@ -1,3 +1,4 @@
+#@ts-ignore
 #!/usr/bin/env bash
 #
 # generate-sbom.sh — Generate a clean CycloneDX SBOM using Syft

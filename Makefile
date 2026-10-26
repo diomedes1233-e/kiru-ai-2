@@ -1,33 +1,30 @@
+FROM python:3.11-slim
 
-ifneq ($(shell which docker-compose 2>/dev/null),)
-    DOCKER_COMPOSE := docker-compose
-else
-    DOCKER_COMPOSE := docker compose
-endif
+WORKDIR /app
 
-install:
-	$(DOCKER_COMPOSE) up -d
+# Instalar dependencias del sistema, curl y Node.js 20 para compilar el frontend
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    git \
+    curl \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
+    && rm -rf /var/lib/apt/lists/*
 
-remove:
-	@chmod +x confirm_remove.sh
-	@./confirm_remove.sh
+# Copiar archivos de configuración de dependencias
+COPY package.json package-lock.json ./
+COPY requirements.txt ./
 
-start:
-	$(DOCKER_COMPOSE) start
-startAndBuild: 
-	$(DOCKER_COMPOSE) up -d --build
+# Instalar dependencias de Python y Node.js
+RUN pip install --no-cache-dir -r requirements.txt
+RUN npm install --legacy-peer-deps
 
-stop:
-	$(DOCKER_COMPOSE) stop
+# Copiar el resto del código del proyecto
+COPY . .
 
-update:
-	# Calls the LLM update script
-	chmod +x update_ollama_models.sh
-	@./update_ollama_models.sh
-	@git pull
-	$(DOCKER_COMPOSE) down
-	# Make sure the ollama-webui container is stopped before rebuilding
-	@docker stop open-webui || true
-	$(DOCKER_COMPOSE) up --build -d
-	$(DOCKER_COMPOSE) start
+# Compilar la aplicación web
+RUN NODE_OPTIONS="--max-old-space-size=4096" npm run build
 
+# Exponer el puerto y definir comando de inicio
+EXPOSE 8000
+CMD ["bash", "backend/dev.sh"]

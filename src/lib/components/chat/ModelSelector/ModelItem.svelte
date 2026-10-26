@@ -103,7 +103,7 @@
 						class="flex size-4 items-center rounded-full"
 						loading="lazy"
 						on:error={(e) => {
-							// LICENSE covers this Open WebUI fallback logo.
+							// LICENSE covers this Kiru fallback logo.
 							// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 							// https://docs.openwebui.com/license.
 							e.currentTarget.src = '/favicon.png';

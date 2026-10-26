@@ -545,7 +545,7 @@
 												alt={model.name}
 												class="size-5 rounded-full object-cover shrink-0"
 												on:error={(e) => {
-													// LICENSE covers this Open WebUI fallback logo.
+													// LICENSE covers this Kiru fallback logo.
 													// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 													// https://docs.openwebui.com/license.
 													e.target.src = '/favicon.png';

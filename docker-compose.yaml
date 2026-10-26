@@ -7,11 +7,10 @@ services:
     tty: true
     restart: unless-stopped
     image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
+    networks:
+      - kiru-net
 
   open-webui:
-    build:
-      context: .
-      dockerfile: Dockerfile
     image: ghcr.io/open-webui/open-webui:${WEBUI_DOCKER_TAG-main}
     container_name: open-webui
     volumes:
@@ -26,7 +25,22 @@ services:
     extra_hosts:
       - host.docker.internal:host-gateway
     restart: unless-stopped
+    networks:
+      - kiru-net
+
+  mi-api-local:
+    build: ./mi-api-local
+    container_name: ia-local-container
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    networks:
+      - kiru-net
 
 volumes:
   ollama: {}
   open-webui: {}
+
+networks:
+  kiru-net:
+    driver: bridge

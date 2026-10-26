@@ -642,9 +642,9 @@
 
 			if ($isLastActiveTab) {
 				if ($settings?.notificationEnabled ?? false) {
-					new Notification(`${data.title} / Open WebUI`, {
+					new Notification(`${data.title} / Kiru`, {
 						body: timeStr,
-						// LICENSE covers this Open WebUI notification identifier.
+						// LICENSE covers this Kiru notification identifier.
 						// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 						// https://docs.openwebui.com/license.
 						icon: `${WEBUI_BASE_URL}/static/favicon.png`
@@ -796,9 +796,9 @@
 
 					if ($isLastActiveTab) {
 						if ($settings?.notificationEnabled ?? false) {
-							new Notification(`${displayTitle} / Open WebUI`, {
+							new Notification(`${displayTitle} / Kiru`, {
 								body: contentPreview,
-								// LICENSE covers this Open WebUI notification identifier.
+								// LICENSE covers this Kiru notification identifier.
 								// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 								// https://docs.openwebui.com/license.
 								icon: `${WEBUI_BASE_URL}/static/favicon.png`
@@ -933,10 +933,10 @@
 
 				if ($isLastActiveTab) {
 					if ($settings?.notificationEnabled ?? false) {
-						// LICENSE covers this Open WebUI notification identifier.
+						// LICENSE covers this Kiru notification identifier.
 						// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 						// https://docs.openwebui.com/license.
-						new Notification(`${title} / Open WebUI`, {
+						new Notification(`${title} / Kiru`, {
 							body: content,
 							icon: `${WEBUI_API_BASE_URL}/users/${data?.user?.id}/profile/image`
 						});
@@ -1346,7 +1346,7 @@
 		if (backendConfig) {
 			// Save Backend Status to Store
 			await config.set(backendConfig);
-			// LICENSE covers this Open WebUI branding surface, including name, logo,
+			// LICENSE covers this Kiru branding surface, including name, logo,
 			// visual, textual, symbolic identifiers, metadata, and surrounding UI.
 			// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 			// https://docs.openwebui.com/license.
@@ -1464,7 +1464,7 @@
 </script>
 
 <svelte:head>
-	<!-- LICENSE covers this Open WebUI branding surface, including name, logo,
+	<!-- LICENSE covers this Kiru branding surface, including name, logo,
 	visual, textual, symbolic identifiers, metadata, and surrounding UI.
 	Do not alter, remove, obscure, or replace it except as LICENSE permits:
 	https://docs.openwebui.com/license. -->

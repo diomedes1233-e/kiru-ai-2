@@ -45,7 +45,7 @@ const pypiDepends = {
 
 import { loadPyodide } from 'pyodide';
 import { setGlobalDispatcher, ProxyAgent } from 'undici';
-import { writeFile, readFile, copyFile, readdir, rmdir, access, mkdir, rm } from 'fs/promises';
+import { writeFile, readFile, copyFile, readdir, rm, access, mkdir} from 'fs/promises';
 
 /**
  * Loading network proxy configurations from the environment variables.
@@ -89,17 +89,16 @@ async function downloadPackages() {
 		console.error('Failed to load Pyodide:', err);
 		return;
 	}
-
-	const packageJson = JSON.parse(await readFile('package.json'));
+    const packageJson = JSON.parse(await readFile('package.json', 'utf8'));
 	const pyodideVersion = packageJson.dependencies.pyodide.replace('^', '');
 
 	try {
-		const pyodidePackageJson = JSON.parse(await readFile('static/pyodide/package.json'));
+		const pyodidePackageJson = JSON.parse(await readFile('static/pyodide/package.json', 'utf8'));
 		const pyodidePackageVersion = pyodidePackageJson.version.replace('^', '');
 
 		if (pyodideVersion !== pyodidePackageVersion) {
 			console.log('Pyodide version mismatch, removing static/pyodide directory');
-			await rmdir('static/pyodide', { recursive: true });
+			await rm('static/pyodide', { recursive: true });
 		}
 	} catch (err) {
 		console.log('Pyodide package not found, proceeding with download.', err);
@@ -170,6 +169,7 @@ async function downloadPyPIWheels() {
 		const files = meta.urls || [];
 		// Find the pure-Python wheel (py3-none-any)
 		const wheel = files.find(
+			/** @param {{ filename: string }} f */
 			(f) => f.filename.endsWith('.whl') && f.filename.includes('py3-none-any')
 		);
 		if (!wheel) {
@@ -203,7 +203,7 @@ async function downloadPyPIWheels() {
 				sha256: wheel.digests?.sha256 || '',
 				package_type: 'package',
 				imports: [pkg.replace(/-/g, '_')],
-				depends: pypiDepends[pkg] || []
+				depends: /** @type {Record<string, string[]>} */ (pypiDepends)[pkg] || []
 			};
 			console.log(`  Added ${pkg}==${version} to pyodide-lock.json`);
 		}

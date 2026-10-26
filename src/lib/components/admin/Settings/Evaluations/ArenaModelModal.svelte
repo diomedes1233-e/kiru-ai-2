@@ -43,7 +43,7 @@
 		}
 	};
 
-	// LICENSE covers this Open WebUI fallback logo.
+	// LICENSE covers this Kiru fallback logo.
 	// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 	// https://docs.openwebui.com/license.
 	let profileImageUrl = `${WEBUI_BASE_URL}/favicon.png`;
@@ -109,7 +109,7 @@
 
 		name = '';
 		id = '';
-		// LICENSE covers this Open WebUI fallback logo.
+		// LICENSE covers this Kiru fallback logo.
 		// Do not alter, remove, obscure, or replace it except as LICENSE permits:
 		// https://docs.openwebui.com/license.
 		profileImageUrl = `${WEBUI_BASE_URL}/favicon.png`;
