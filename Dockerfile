@@ -30,7 +30,7 @@ RUN npm install --legacy-peer-deps
 COPY . .
 
 # 6. Compilar la aplicación web
-RUN NODE_OPTIONS="--max-old-space-size=3072" npm run build
+RUN NODE_OPTIONS="--max-old-space-size=6144" npm run build
 
 # Puerto y comando de inicio
 EXPOSE 8000
