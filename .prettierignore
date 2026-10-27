@@ -1,7 +1,5 @@
 # Ignore files for PNPM, NPM and YARN
-pnpm-lock.yaml
-package-lock.json
-yarn.lock
+
 
 # Copy of .gitignore
 .DS_Store
@@ -311,7 +309,7 @@ cypress/screenshots
 
 
 
-/static/*
+
 # Generated and checksum-verified crypto distribution
 src/lib/encryption/vendor/
 crypto/encryption/target/

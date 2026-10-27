@@ -1,30 +1,16 @@
-FROM python:3.11-slim
+build:
+	docker build --platform linux/arm64 -t mi-api-local .
 
-WORKDIR /app
+run:
+	docker run -d -p 8000:8000 --name ia-local-container mi-api-local
 
-# Instalar dependencias del sistema, curl y Node.js 20 para compilar el frontend
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    git \
-    curl \
-    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-    && apt-get install -y nodejs \
-    && rm -rf /var/lib/apt/lists/*
+logs:
+	docker logs -f ia-local-container
 
-# Copiar archivos de configuración de dependencias
-COPY package.json package-lock.json ./
-COPY requirements.txt ./
+stop:
+	docker stop ia-local-container && docker rm ia-local-container
 
-# Instalar dependencias de Python y Node.js
-RUN pip install --no-cache-dir -r requirements.txt
-RUN npm install --legacy-peer-deps
-
-# Copiar el resto del código del proyecto
-COPY . .
-
-# Compilar la aplicación web
-RUN NODE_OPTIONS="--max-old-space-size=4096" npm run build
-
-# Exponer el puerto y definir comando de inicio
-EXPOSE 8000
-CMD ["bash", "backend/dev.sh"]
+clean:
+	docker stop ia-local-container || true
+	docker rm ia-local-container || true
+	docker rmi mi-api-local || true
