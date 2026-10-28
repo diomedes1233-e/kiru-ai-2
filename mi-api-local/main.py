@@ -1,5 +1,4 @@
-# `main.py` — API local de Kiru
-
+# `main.py` — Kiru API (Ecosistema Local)
 
 import time
 import json
@@ -24,26 +23,24 @@ from transformers import (
 app = FastAPI(
     title="Kiru API",
     version="1.6.1",
-    description="API local de Kiru compatible con Open WebUI y n8n, utilizando Qwen 2.5 1.5B en CPU."
+    description="API oficial del ecosistema Kiru, compatible con Open WebUI y n8n, utilizando Qwen 2.5 1.5B en CPU."
 )
 
-# Ruta real del modelo en Hugging Face.
-# Si el modelo está descargado localmente, también puedes
-# utilizar la ruta local de sus archivos.
+# Ruta real del modelo en Hugging Face o directorio local.
 MODEL_PATH = "Qwen/Qwen2.5-1.5B-Instruct"
 
-# Nombre público que utilizarán Kiru, Open WebUI y n8n.
+# Nombre público oficial para Kiru, Open WebUI y n8n.
 MODEL_NAME = "kiru-model"
 
 # ============================================================
 # CARGA DEL MODELO: UNA SOLA VEZ
 # ============================================================
 
-print(f"⌛ Cargando tokenizador: {MODEL_PATH}")
+print(f"⌛ Cargando tokenizador para Kiru API: {MODEL_PATH}")
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 
-print(f"⌛ Cargando modelo {MODEL_PATH} en CPU...")
+print(f"⌛ Cargando modelo {MODEL_PATH} en CPU para Kiru OS...")
 
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_PATH,
@@ -51,14 +48,13 @@ model = AutoModelForCausalLM.from_pretrained(
     low_cpu_mem_usage=True,
 )
 
-model = model.to("cpu")# type: ignore
+model = model.to("cpu")  # type: ignore
 model.eval()
 
-# Evitar errores si el tokenizador no tiene pad_token configurado.
 if tokenizer.pad_token_id is None:
     tokenizer.pad_token = tokenizer.eos_token
 
-print("✅ Modelo cargado correctamente.")
+print("✅ Modelo cargado correctamente en Kiru API.")
 print(f"✅ Nombre público del modelo: {MODEL_NAME}")
 
 # ============================================================
@@ -67,9 +63,7 @@ print(f"✅ Nombre público del modelo: {MODEL_NAME}")
 
 security = HTTPBearer(auto_error=False)
 
-# Debe coincidir con la clave configurada en Open WebUI y n8n.
-# Cámbiala por una clave privada antes de exponer la API
-# a otras máquinas o a Internet.
+# Clave de seguridad predeterminada para el ecosistema Kiru.
 VALID_API_KEY: Optional[str] = "sk-kiru-12345"
 
 
@@ -78,7 +72,7 @@ async def verify_api_key(
         security
     ),
 ):
-    """Verifica el token Bearer enviado por el cliente."""
+    """Verifica el token Bearer enviado por los clientes del ecosistema Kiru."""
 
     if VALID_API_KEY is not None:
         if (
@@ -87,7 +81,7 @@ async def verify_api_key(
         ):
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="API Key inválida o no proporcionada",
+                detail="API Key de Kiru inválida o no proporcionada",
                 headers={"WWW-Authenticate": "Bearer"},
             )
 
@@ -117,19 +111,19 @@ class ChatCompletionRequest(BaseModel):
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
     print(
-        f"📥 [REQUEST] {request.method} "
+        f"📥 [KIRU-API REQUEST] {request.method} "
         f"{request.url.path}"
     )
 
     try:
         response = await call_next(request)
         print(
-            f"📤 [RESPONSE] Status: {response.status_code}"
+            f"📤 [KIRU-API RESPONSE] Status: {response.status_code}"
         )
         return response
 
     except Exception as exc:
-        print(f"❌ Error HTTP: {exc}")
+        print(f"❌ Error en Kiru API: {exc}")
         raise
 
 
@@ -141,7 +135,7 @@ async def log_requests(request: Request, call_next):
 async def root_ping():
     return {
         "status": "online",
-        "message": "API Local Kiru / Qwen en ejecución",
+        "message": "Kiru API en ejecución y sincronizada con el ecosistema",
         "model": MODEL_NAME,
     }
 
@@ -160,7 +154,7 @@ async def list_models():
                 "id": MODEL_NAME,
                 "object": "model",
                 "created": int(time.time()),
-                "owned_by": "local",
+                "owned_by": "kiru-ecosystem",
             }
         ],
     }
@@ -193,8 +187,6 @@ async def create_chat_completion(
                 role = message.get("role", "user")
                 content = message.get("content", "")
 
-                # Compatibilidad básica con contenidos que llegan
-                # como listas de bloques de texto.
                 if isinstance(content, list):
                     parts = []
 
@@ -313,12 +305,11 @@ async def create_chat_completion(
             def run_generation():
                 try:
                     with torch.inference_mode():
-                        model.generate(**generation_kwargs)# type: ignore
+                        model.generate(**generation_kwargs)  # type: ignore
                 except Exception as exc:
                     print(
-                        f"❌ Error en generación streaming: {exc}"
+                        f"❌ Error en streaming de Kiru API: {exc}"
                     )
-                    # Desbloquear el iterador si la generación falla.
                     streamer.end()
 
             thread = threading.Thread(
@@ -328,7 +319,7 @@ async def create_chat_completion(
             thread.start()
 
             async def generate_stream():
-                chunk_id = f"chatcmpl-{int(time.time())}"
+                chunk_id = f"kiru-cmpl-{int(time.time())}"
 
                 for new_text in streamer:
                     if not new_text:
@@ -389,7 +380,7 @@ async def create_chat_completion(
         # ----------------------------------------------------
 
         with torch.inference_mode():
-            outputs = model.generate(**generation_kwargs)# type: ignore
+            outputs = model.generate(**generation_kwargs)  # type: ignore
 
         generated_ids = outputs[0][input_token_len:]
 
@@ -401,7 +392,7 @@ async def create_chat_completion(
         output_token_len = len(generated_ids)
 
         return {
-            "id": f"chatcmpl-{int(time.time())}",
+            "id": f"kiru-cmpl-{int(time.time())}",
             "object": "chat.completion",
             "created": int(time.time()),
             "model": request.model or MODEL_NAME,
@@ -428,11 +419,11 @@ async def create_chat_completion(
         raise
 
     except Exception as exc:
-        print(f"❌ Error en generación: {exc}")
+        print(f"❌ Error en Kiru API: {exc}")
 
         raise HTTPException(
             status_code=500,
-            detail="Error interno durante la generación de texto",
+            detail="Error interno en Kiru API durante la generación de texto",
         )
 
 
@@ -444,6 +435,6 @@ async def create_chat_completion(
 async def health_check():
     return {
         "status": "healthy",
+        "service": "Kiru API",
         "model": MODEL_NAME,
     }
-
