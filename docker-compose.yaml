@@ -1,46 +1,46 @@
 services:
-  ollama:
-    volumes:
-      - ollama:/root/.ollama
-    container_name: ollama
-    pull_policy: always
-    tty: true
-    restart: unless-stopped
-    image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
-    networks:
-      - kiru-net
-
-  open-webui:
-    image: ghcr.io/open-webui/open-webui:${WEBUI_DOCKER_TAG-main}
-    container_name: open-webui
-    volumes:
-      - open-webui:/app/backend/data
-    depends_on:
-      - ollama
-    ports:
-      - ${OPEN_WEBUI_PORT-3000}:8080
+  kiru_postgres:
+    image: postgres:15-alpine
+    container_name: kiru_postgres
     environment:
-      - 'OLLAMA_BASE_URL=http://ollama:11434'
-      - 'WEBUI_SECRET_KEY='
-    extra_hosts:
-      - host.docker.internal:host-gateway
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: kiru
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
-    networks:
-      - kiru-net
+
+  kiru_ollama:
+    image: ollama/ollama:latest
+    container_name: kiru_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  kiru_redis:
+    image: redis:alpine
+    container_name: kiru_redis
+    restart: unless-stopped
 
   mi-api-local:
     build: ./mi-api-local
-    container_name: ia-local-container
+    container_name: kiru_api_local
     ports:
       - "8000:8000"
+    environment:
+      - OLLAMA_HOST=http://kiru_ollama:11434
+      - DATABASE_URL=postgresql://postgres:postgres@kiru_postgres:5432/kiru
+    volumes:
+      - kiru_data:/app/data
+    depends_on:
+      - kiru_ollama
+      - kiru_postgres
+      - kiru_redis
     restart: unless-stopped
-    networks:
-      - kiru-net
 
 volumes:
-  ollama: {}
-  open-webui: {}
-
-networks:
-  kiru-net:
-    driver: bridge
+  postgres_data:
+  ollama_data:
+  kiru_data:

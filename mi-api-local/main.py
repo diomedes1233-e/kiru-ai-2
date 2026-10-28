@@ -22,12 +22,9 @@ from transformers import (
 # ============================================================
 
 app = FastAPI(
-    title="Local OpenAI-Compatible API",
+    title="Kiru API",
     version="1.6.1",
-    description=(
-        "API local de Kiru compatible con Open WebUI y n8n, "
-        "utilizando Qwen 2.5 1.5B en CPU."
-    ),
+    description="API local de Kiru compatible con Open WebUI y n8n, utilizando Qwen 2.5 1.5B en CPU."
 )
 
 # Ruta real del modelo en Hugging Face.
