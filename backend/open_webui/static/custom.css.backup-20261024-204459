@@ -1,0 +1,172 @@
+/* ==========================================================
+   KIRU OS - ULTRA-FUTURISTIC CORE OVERRIDE (NATIVE SOURCE)
+   Ruta: /Users/usuario/kiru_ai/src/app.css
+   ========================================================== */
+
+:root,
+[data-theme='dark'],
+[data-theme='light'],
+.dark,
+.light {
+	--bg-primary: #020617 !important;
+	--bg-secondary: #080e1e !important;
+	--bg-tertiary: #0f172a !important;
+
+	--accent-cyan: #00f3ff !important;
+	--accent-blue: #0284c7 !important;
+	--accent-gold: #d4af37 !important;
+
+	--border-glow: rgba(0, 243, 255, 0.2) !important;
+	--border-glow-strong: rgba(0, 243, 255, 0.5) !important;
+
+	--text-primary: #f8fafc !important;
+	--text-secondary: #94a3b8 !important;
+}
+
+body,
+html,
+#app,
+main {
+	background-color: var(--bg-primary) !important;
+	color: var(--text-primary) !important;
+	font-family:
+		'Inter',
+		system-ui,
+		-apple-system,
+		sans-serif !important;
+}
+
+aside,
+nav,
+.sidebar {
+	background: rgba(8, 14, 30, 0.9) !important;
+	backdrop-filter: blur(18px) !important;
+	-webkit-backdrop-filter: blur(18px) !important;
+	border-right: 1px solid var(--border-glow) !important;
+	box-shadow: 4px 0 25px rgba(0, 0, 0, 0.6) !important;
+}
+
+.chat-container,
+.card,
+textarea,
+input,
+select {
+	background: rgba(15, 23, 42, 0.7) !important;
+	backdrop-filter: blur(12px) !important;
+	border: 1px solid var(--border-glow) !important;
+	border-radius: 12px !important;
+	color: var(--text-primary) !important;
+	box-shadow: inset 0 0 12px rgba(0, 243, 255, 0.02) !important;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+	border-color: var(--accent-cyan) !important;
+	box-shadow: 0 0 18px var(--border-glow-strong) !important;
+	outline: none !important;
+}
+
+div[data-message-role='assistant'],
+.message-assistant {
+	background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(8, 14, 30, 0.8)) !important;
+	border-left: 3px solid var(--accent-cyan) !important;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.footer-info,
+.version-tag,
+[data-version] {
+	display: none !important;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+::-webkit-scrollbar-track {
+	background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 243, 255, 0.25);
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--accent-cyan);
+}
+
+/* KIRU OS — ajustes de selectores reales */
+html,
+body,
+#app,
+main,
+#chat-container,
+#note-chat-container {
+	background-color: #020617 !important;
+	color: #f8fafc;
+}
+
+nav[aria-label="App navigation"] {
+	background: rgba(8, 14, 30, 0.96) !important;
+	border-right: 1px solid rgba(0, 243, 255, 0.2) !important;
+	box-shadow: 4px 0 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+#chat-container textarea,
+#chat-container input,
+#note-chat-container textarea,
+#note-chat-container input {
+	color: #f8fafc;
+	border-color: rgba(0, 243, 255, 0.25);
+}
+
+#chat-container textarea:focus,
+#chat-container input:focus,
+#note-chat-container textarea:focus,
+#note-chat-container input:focus {
+	border-color: #00f3ff !important;
+	box-shadow: 0 0 18px rgba(0, 243, 255, 0.25) !important;
+	outline: none;
+}
+
+/* KIRU OS: estilos dirigidos al contenedor principal de Open WebUI */
+.app > div {
+	background:
+		radial-gradient(
+			circle at 80% 0%,
+			rgba(0, 243, 255, 0.16),
+			transparent 38%
+		),
+		#020617 !important;
+	color: #f8fafc !important;
+}
+
+.app > div nav,
+.app > div aside,
+.app > div [role="navigation"] {
+	background-color: rgba(8, 14, 30, 0.97) !important;
+	border-color: rgba(0, 243, 255, 0.4) !important;
+}
+
+.app #chat-container,
+.app #note-chat-container {
+	background-color: transparent !important;
+	color: #f8fafc !important;
+}
+
+.app #chat-container textarea,
+.app #chat-container input,
+.app #note-chat-container textarea,
+.app #note-chat-container input {
+	background-color: rgba(15, 23, 42, 0.92) !important;
+	border: 1px solid rgba(0, 243, 255, 0.35) !important;
+	color: #f8fafc !important;
+}
+
+.app #chat-container textarea:focus,
+.app #chat-container input:focus,
+.app #note-chat-container textarea:focus,
+.app #note-chat-container input:focus {
+	border-color: #00f3ff !important;
+	box-shadow: 0 0 18px rgba(0, 243, 255, 0.35) !important;
+}

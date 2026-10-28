@@ -12,7 +12,7 @@ COPY requirements.txt ./
 COPY package.json package-lock.json ./
 
 # 2. Instalar dependencias de Python
-RUN pip install --no-cache-dir --default-timeout=1000 --retries 5 --no-binary :all: -r requirements.txt || pip install --no-cache-dir --default-timeout=1000 --retries 5 -r requirements.txt
+RUN python -m pip install --upgrade pip && python -m pip install --no-cache-dir --default-timeout=1000 --retries 5 -r requirements.txt
 
 # 3. Instalar dependencias del sistema y Node.js 20
 RUN apt-get update && apt-get install -y --no-install-recommends \
