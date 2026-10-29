@@ -23,7 +23,8 @@ from transformers import (
 app = FastAPI(
     title="Kiru API",
     version="1.6.1",
-    description="API oficial del ecosistema Kiru, compatible con Open WebUI y n8n, utilizando Qwen 2.5 1.5B en CPU."
+    description="API oficial del ecosistema Kiru, compatible con Open WebUI y n8n, utilizando Qwen 2.5 1.5B en CPU.",
+    openapi_url="/kiru.json"
 )
 
 # Ruta real del modelo en Hugging Face o directorio local.

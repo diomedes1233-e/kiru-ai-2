@@ -1,0 +1,60 @@
+services:
+  kiru_postgres:
+    image: postgres:15-alpine
+    container_name: kiru_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: kiru
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  kiru_ollama:
+    image: ollama/ollama:latest
+    container_name: kiru_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  kiru_redis:
+    image: redis:alpine
+    container_name: kiru_redis
+    restart: unless-stopped
+
+  mi-api-local:
+    build: ./mi-api-local
+    container_name: kiru_api_local
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_HOST=http://kiru_ollama:11434
+      - DATABASE_URL=postgresql://postgres:postgres@kiru_postgres:5432/kiru
+    volumes:
+      - kiru_data:/app/data
+    depends_on:
+      - kiru_ollama
+      - kiru_postgres
+      - kiru_redis
+    restart: unless-stopped
+
+  kiru_ai_web:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: kiru_ai_web
+    ports:
+      - "3000:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://kiru_ollama:11434
+    volumes:
+      - openwebui_data:/app/backend/data
+    depends_on:
+      - kiru_ollama
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  ollama_data:
+  kiru_data:
+  openwebui_data:
